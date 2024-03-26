@@ -1,0 +1,115 @@
+num_gpu = 1
+expname = cdavis_blurbatteries_evdeblurnerf_ediprior_evcrf_color
+
+basedir = logs
+datadir = datasets/ev-deblurnerf_cdavis/blurbatteries
+tbdir = tb
+dataset_type = llff
+
+seed = 10000
+factor = 1
+llffhold = 5
+llffhold_end
+
+use_pts0_prior = edi
+pts0_target_weight = 1.0
+pts0_target_end_iter = 9999999
+
+blur_loss_after = 1200
+kernel_start_iter = 1200
+
+pts0_target_start_iter = 0
+add_event_egm_startiter = 0
+
+tone_mapping_events_add_bii='color-pos-neg'
+
+pose_transform_allknown = True
+event_egm_use_colorevents = True
+tone_mapping_learn_init_identity = True
+tone_mapping_start_learn_iter = 1200
+event_egm_use_color_weights = [0.4, 0.2, 0.4]
+event_egm_color_weights_start_iter = 1200
+
+events_N_rand 2048
+events_tms_unit = 'us'
+events_tms_files_unit = 'us'
+
+use_events
+events_threshold = 0.25
+
+event_accumulate_step_range = [0, 0]
+event_accumulate_step_range_end = [0, 0]
+event_accumulate_step_scheduler = constant
+
+event_egm_use_awp
+
+add_event_egm
+add_event_egm_stages = [stage0, stage1]
+event_egm_weight = 0.1
+
+N_rand = 1024
+N_samples = 64
+N_importance = 64
+N_iters = 30000
+lrate = 0.005
+lrate_decay = 10
+
+use_viewdirs = True
+raw_noise_std = 1e0
+rgb_activate = sigmoid
+
+mode = c2f
+coarse_num_layers = 2
+coarse_num_layers_color = 3
+coarse_hidden_dim = 64
+coarse_hidden_dim_color = 64
+coarse_app_dim = 32
+coarse_app_n_comp = [64,16,16]
+coarse_n_voxels = 16777248
+
+fine_num_layers = 2
+fine_num_layers_color = 3
+fine_hidden_dim = 256
+fine_hidden_dim_color = 256
+fine_geo_feat_dim = 128
+fine_app_dim = 32
+fine_app_n_comp = [64,16,16]
+fine_n_voxels = 134217984
+
+kernel_type = RBK
+kernel_ptnum = 10
+
+kernel_rbk_use_viewdirs
+kernel_img_embed = 32
+kernel_rand_embed = 2  # the in_embed
+kernel_spatial_embed = 2
+kernel_depth_embed = 0
+
+kernel_rbk_use_origin
+
+kernel_rbk_extra_feat_ch = 0
+kernel_rbk_se_r_depth = 1
+kernel_rbk_se_r_width = 32
+kernel_rbk_se_r_output_ch = 3
+kernel_rbk_se_v_depth = 1
+kernel_rbk_se_v_width = 32
+kernel_rbk_se_v_output_ch = 3
+kernel_rbk_ccw_depth = 1
+kernel_rbk_ccw_width = 32
+kernel_rbk_se_rv_window = 0.1
+
+kernel_use_awp
+kernel_awp_use_coarse_to_fine_opt
+kernel_awp_sam_emb_depth=4
+kernel_awp_sam_emb_width=64
+kernel_awp_mot_emb_depth=1
+kernel_awp_mot_emb_width=32
+kernel_awp_dir_freq=2
+kernel_awp_rgb_freq=2
+kernel_awp_depth_freq=3
+kernel_awp_ray_dir_freq=2
+
+tone_mapping_type none
+tone_mapping_events_type learn
+
+render_radius_scale = 0.5

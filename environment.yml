@@ -1,0 +1,33 @@
+name: ev-deblurnerf
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+  - nvidia
+  - open3d-admin
+dependencies:
+  - python=3.8
+  - pytorch::pytorch-cuda=11.6
+  - pytorch::pytorch==1.13.1
+  - pytorch::torchvision==0.14.1
+  - conda-forge::configargparse=1.5.3
+  - conda-forge::einops=0.7.0
+  - conda-forge::imageio=2.22.0
+  - conda-forge::kornia=0.6.9
+  - conda-forge::numba=0.56.4
+  - conda-forge::numpy=1.23.1
+  - conda-forge::pandas=2.0.3
+  - conda-forge::plotly=5.18.0
+  - conda-forge::scikit-image=0.19.2
+  - conda-forge::scipy=1.9.1
+  - conda-forge::tqdm=4.65.0
+  - conda-forge::h5py=3.8.0
+  - conda-forge::pillow=9.2.0
+  - conda-forge::pyyaml=6.0
+  - open3d-admin::open3d=0.15.1
+  - pip
+  - pip:
+    - imageio-ffmpeg>=0.4.9
+    - matplotlib>=3.7.3
+    - opencv-python==4.6.0.66
+    - tensorboardx>=2.5.1

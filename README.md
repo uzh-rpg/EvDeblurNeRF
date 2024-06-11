@@ -2,8 +2,19 @@
 
 ![](./assets/net_overview.png)
 
-This is the official Pytorch implementation of the CVPR 2024 paper 
+This is the official Pytorch implementation of the **CVPR 2024** paper\
 [Mitigating Motion Blur in Neural Radiance Fields with Events and Frames](https://rpg.ifi.uzh.ch/docs/CVPR24_Cannici.pdf).
+
+Watch the [**video**](https://youtu.be/5CuM2108R6E) for a quick overview.
+
+```bibtex
+@InProceedings{Cannici_2024_CVPR,
+  author  = {Marco Cannici and Davide Scaramuzza},
+  title   = {Mitigating Motion Blur in Neural Radiance Fields with Events and Frames},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year    = {2024},
+}
+```
 
 ### Method Overview
 
@@ -115,18 +126,6 @@ python run_nerf.py --config configs/evdeblurnerf_blender/tx_blurfactory_evdeblur
 
 This command will train a model using the parameters specified in the config file. Video and test set renderings will be
 produced at the end of training, or every `i_testset` and `i_video` iterations, respectively.
-
-## Citation
-If you find this useful, please consider citing our paper:
-
-```bibtex
-@InProceedings{Cannici_2024_CVPR,
-  author  = {Marco Cannici and Davide Scaramuzza},
-  title   = {Mitigating Motion Blur in Neural Radiance Fields with Events and Frames},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year    = {2024},
-}
-```
 
 ## Acknowledgments
 This source code is derived from multiple sources, in particular: 

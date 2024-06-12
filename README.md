@@ -1,11 +1,17 @@
 # Mitigating Motion Blur in Neural Radiance Fields with Events and Frames
 
-![](./assets/net_overview.png)
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=5CuM2108R6E">
+    <img src="assets/thumbnail_ytplay.png" alt="EvDeblurNeRF" width="500"/>
+  </a>
+</p>
+
 
 This is the official Pytorch implementation of the **CVPR 2024** paper\
 [Mitigating Motion Blur in Neural Radiance Fields with Events and Frames](https://rpg.ifi.uzh.ch/docs/CVPR24_Cannici.pdf).
 
-Watch the [**video**](https://youtu.be/5CuM2108R6E) for a quick overview.
+## Citation
+A pdf of the paper is available [here](https://rpg.ifi.uzh.ch/docs/CVPR24_Cannici.pdf). If you use this codebase, or the datasets accompanying the paper, please cite the publication as follows:
 
 ```bibtex
 @InProceedings{Cannici_2024_CVPR,
@@ -16,14 +22,17 @@ Watch the [**video**](https://youtu.be/5CuM2108R6E) for a quick overview.
 }
 ```
 
-### Method Overview
+## Method Overview
 
-![](./assets/results.png)
+![](./assets/net_overview.png)
+
 
 We propose a novel approach for recovering a sharp NeRF in the presence of motion blur, incorporating both model-based
 priors and learning-based modules, and exploiting the complementary information provided by events and frames. We 
 exploit the event double integral as an additional model-based prior and model the event-pixel response using an 
 end-to-end learnable response function, allowing our method to adapt to non-idealities in the real event-camera sensor.
+
+![](./assets/results.png)
 
 ## Project Overview
 
